@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This my first note which host in github. Inspiring by [Phodal](https://github.com/phodal), I wanna write down the experience when I try to learn a new technology. The note is based on [Full Stack Foundations](https://cn.udacity.com/course/full-stack-foundations--ud088/) on Udacity
+This my first note which host in github. Inspiring by [Phodal](https://github.com/phodal), I wanna write down the experience when I try to learn a new technology. The note is based on [Full Stack Foundations](https://cn.udacity.com/course/full-stack-foundations--ud088/) on Udacity.
 
 ## TOC
 
@@ -32,7 +32,7 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
 
 ---
 # 介绍
-这是我第一篇在 github 上写的文章。阅读过 [Phodal](https://github.com/phodal) 的博客后，我有了想在 github 上写下自己学习新技术的经历。这篇文章是基于 Udacity 的 [Full Stack Foundations](https://cn.udacity.com/course/full-stack-foundations--ud088/)
+这是我第一篇在 github 上写的文章。阅读过 [Phodal](https://github.com/phodal) 的博客后，我有了想在 github 上写下自己学习新技术的经历。这篇文章是基于 Udacity 的 [Full Stack Foundations](https://cn.udacity.com/course/full-stack-foundations--ud088/)。
 
 # 目录
 
