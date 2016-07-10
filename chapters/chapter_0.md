@@ -61,7 +61,9 @@ http://www.vagrantup.com/downloads.html
 
     即可退出当前虚拟机环境
 
-    
+
 ---
 
 现在我们的 vagrant 之旅会告一段落，我们现在会开始创建第一个 CRUD 应用了！
+
+[下一章节：第一个 CRUD 应用](chapter_1_1.md)

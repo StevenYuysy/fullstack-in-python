@@ -11,7 +11,8 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
     - What is CRUD ?
     - SQL
         - SQL statement
-        - ORM - SQLalchemy
+        - create a database
+        - ORM
         - CRUD with SQLalchemy
     - HTTP Server
         - Basic introduction
@@ -37,11 +38,12 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
 # 目录
 
 - [开发环境准备](chapters/chapter_0.md)
-- 第一个 CRUD 应用
+- [第一个 CRUD 应用](chapters/chapter_1_1.md)
     - 什么是 CRUD ？
     - SQL
         - SQL 语句
-        - ORM - SQLalchemy
+        - 创建数据库
+        - ORM
         - 通过 SQLalchemy 进行 CRUD 操作
     - HTTP Server
         - 基础知识
