@@ -7,7 +7,7 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
 ## TOC
 
 - [Ready for development](chapters/chapter_0.md)
-- Build you first CRUD app
+- [Build you first CRUD app](chapters/chapter_1_0.md)
     - What is CRUD ?
     - SQL
         - SQL statement
@@ -38,7 +38,7 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
 # 目录
 
 - [开发环境准备](chapters/chapter_0.md)
-- [第一个 CRUD 应用](chapters/chapter_1_1.md)
+- [第一个 CRUD 应用](chapters/chapter_1_0.md)
     - 什么是 CRUD ？
     - SQL
         - SQL 语句
