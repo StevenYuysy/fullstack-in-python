@@ -54,12 +54,14 @@ http://www.vagrantup.com/downloads.html
     ![vagrant-ssh](../images/C0-vagrant-ssh.png)
 
     在此目录下用语句
-    
+
     ```
     vagrant halt
     ```
 
     即可退出当前虚拟机环境
+
+    
 ---
 
 现在我们的 vagrant 之旅会告一段落，我们现在会开始创建第一个 CRUD 应用了！
