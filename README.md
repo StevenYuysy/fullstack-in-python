@@ -8,13 +8,13 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
 
 - [Ready for development](chapters/chapter-0.md)
 - [Build you first CRUD app](chapters/chapter-1-0.md)
-    - What is CRUD ?
-    - SQL
+    - [What is CRUD ?](chapter-1-0.md)
+    - [SQL](chapter-1-1.md)
         - SQL statement
         - create a database
         - ORM
         - CRUD with SQLalchemy
-    - HTTP Server
+    - [HTTP server](chapter-1-2.md)
         - Basic introduction
         - handle GET and POST
 - Build with web framework - Flask
@@ -45,7 +45,7 @@ This my first note which host in github. Inspiring by [Phodal](https://github.co
         - 创建数据库
         - ORM
         - 通过 SQLalchemy 进行 CRUD 操作
-    - HTTP Server
+    - [HTTP 服务器](chapter-1-2.md)
         - 基础知识
         - 解决 GET 和 POST 请求
 - 通过 web 框架制作 - Flask

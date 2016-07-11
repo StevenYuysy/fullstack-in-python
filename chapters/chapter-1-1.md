@@ -218,8 +218,11 @@ session.commit
 
 请完成空白的部分：
 
-![](../images/chapter-1-1-Create-Quiz.png)
+![](../images/C1-1-Create-Quiz.png)
 
-![](../images/chapter-1-1-Read-Quiz.png)
+![](../images/C1-1-Read-Quiz.png)
 
-![](../images/chapter_1_1-Update-Quiz.png)
+![](../images/C1-1-Update-Quiz.png)
+
+[上一章节：第一个 CRUD 应用](chapter-1-0.md)
+[下一章节：HTTP 服务器](chapter-1-2.md)
