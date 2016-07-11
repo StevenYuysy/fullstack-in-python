@@ -181,6 +181,45 @@ for restaurant in restaurants:
     print restaurant.name
 ```
 
+通过 `query` 方法，我们就可以完成查询一个列表的功能了，假如我们需要对其中一些属性进行筛选，可以用 `filter_by` 这个方法，更多的方法，大家可以到 [SQLalchemy](http://www.sqlalchemy.org/) 上面查阅。
+
+### Update
+
+我们需要更新某个数据，这个时候通过查询对应的数据，并直接通过赋值更改之前的属性，然后再保存即可完成数据的更改了，十分简单：
+
+``` python
+# 导入数据库模块部分略，参考上面的代码
+engine = create_engine('sqlite:///restaurantmenu.db')
+Base.metadata.bind = engine
+
+DBSession = sessionmaker(bind = engine)
+session = DBSession()
+
+editRestaurant = session.query(Restaurant).filter_by(id=1).one()
+editRestaurant.name = updateRestaurant
+session.add(editRestaurant)
+session.commit()
+```
+
+### Delete
+
+至于删除则更为简单了，只需要把查询出来的，用 `delete` 方法就可以了。例如我们想删除编号为 100 的餐馆：
+
+``` python
+
+deleteRestaurant = session.query(Restaurant).filter_by(id=100).one()
+session.delete(deleteRestaurant)
+session.commit
+
+```
+
+
 ## CRUD 测验题
 
 请完成空白的部分：
+
+![](../images/chapter-1-1-Create-Quiz.png)
+
+![](../images/chapter-1-1-Read-Quiz.png)
+
+![](../images/chapter_1_1-Update-Quiz.png)
