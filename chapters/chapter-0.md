@@ -66,4 +66,4 @@ http://www.vagrantup.com/downloads.html
 
 现在我们的 vagrant 之旅会告一段落，我们现在会开始创建第一个 CRUD 应用了！
 
-[下一章节：第一个 CRUD 应用](chapter_1_0.md)
+[下一章节：第一个 CRUD 应用](chapter-1-0.md)

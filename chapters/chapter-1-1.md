@@ -5,7 +5,7 @@
 
 我们知道网站是通过数据库来进行 CRUD 操作的，但是怎么样可以让这两者联系起来呢？SQL 就是当下用来操作数据库最流行的语言。通过以下一些简短的例子，我们可以快速的将 SQL 语句和 CRUD 操作对应起来：
 
-![sql](../images/C1_1-sql.png)
+![sql](../images/C1-1-sql.png)
 
 ```
 # INSERT INTO => create
@@ -18,7 +18,7 @@
 
 我们这次的 CRUD 应用是做餐馆管理应用，所以我们的数据库会包括两个东西，餐馆和菜单，大概如下：
 
-![databse](../images/C1_1-database.png)
+![databse](../images/C1-1-database.png)
 
 好，有了这个结构，我们就可以开始写代码了。
 
@@ -51,7 +51,7 @@ conn.close()
 
 ORM(Object-Relational Mapping)，即对象关系映射，简单的说就是对象模型和关系模型的一种映射。
 
-![ORM](../images/C1_1-ORM.png)
+![ORM](../images/C1-1-ORM.png)
 
 ### SQLalchemy
 
@@ -122,8 +122,65 @@ class MenuItem(Base):
 
 好了，这个时候，我们的目录是这样的：
 
-![dir](../images/C1_1-dir.png)
+![dir](../images/C1-1-dir.png)
 
 接下来只要将上面的代码放在一起，其中restaurant.db是一个空文件，到你的目录下运行`python database_setup.py`，你就成功在restaurant.db 里创建了两个表了。
 
 ## SQLalchemy 进行 CRUD 操作
+
+### Create
+
+首先打开虚拟机，通过 ssh 连接，并 cd 到 /vagrant，建立一个 python 文件进行下列操作
+
+``` python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from database_setup import Base, Restaurant, MenuItem
+
+engine = create_engine('sqlite:///restaurantmenu.db')
+Base.metadata.bind = engine
+
+DBSession = sessionmaker(bind = engine)
+session = DBSession()
+```
+
+首先导入我们所需要的模块，通过 `create_engine` 告知文件我们需要连接的是哪一个数据库，然后将 `engine` 与 `Base.metadata.bind` 进行绑定，以确定我们连接的类和数据绑定在一起了。
+
+接下来我们需要一个 `session` 对象，可以帮助代码执行 CRUD 动作和 `engine` 结合起来。在 SQLalchemy 里面我们可以通过 `session` 对象来执行 CRUD操作，类似于 git，它会讲这些操作放进暂存区，但是不会立刻执行直到使用了 `commit` 方法。同时意味这你也可以用 `rollback` 方法回滚到上一次提交。接下来我们将进行 create 的操作。
+
+``` python
+myFirstRestaurant = Restaurant(name='Pizza Hut')
+session.add(myFirstRestaurant)
+session.commit()
+```
+
+我们的第一个餐馆就已经成功建立并提交到数据库了！
+
+### Read
+
+在 code 文件夹中找到 lotsofmenus.py 并在终端运行它，添加完毕以后，会输出 “added menu items!” ，这个时候创建另外一个文件，保存为 py 形式。同样导入上述代码：
+
+``` python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from database_setup import Base, Restaurant, MenuItem
+
+engine = create_engine('sqlite:///restaurantmenu.db')
+Base.metadata.bind = engine
+
+DBSession = sessionmaker(bind = engine)
+session = DBSession()
+```
+
+这个时候我们就可以开始数据库操作了，假如我们要查询所有的餐馆并打印出对应的属性，可以用下面的代码：
+
+```python
+restaurants = session.query(Restaurant).all()
+
+for restaurant in restaurants:
+    print restaurant.name
+```
+
+## CRUD 测验题
+
+请完成空白的部分：
